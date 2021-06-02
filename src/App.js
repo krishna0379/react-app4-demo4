@@ -1,11 +1,40 @@
 import logo from "./logo.svg";
 import "./App.css";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { Home } from "./components/Home";
+import { AboutUs } from "./components/AboutUs";
+import { Project } from "./components/Project";
+import { ContactUs } from "./components/ContactUs";
+import { AppNavBar } from "./Common/AppBarNar";
+
 
 function App() {
   return (
-    <div>
-      <h1 className="bg-primary text light p-3">hello world</h1>
-    </div>
+    <Router>
+      <AppNavBar />
+
+      <Switch>
+        <Route path="/home">
+          <Home />
+        </Route>
+
+        <Route path="/about-us">
+          <AboutUs />
+        </Route>
+
+        <Route path="/project">
+          <Project />
+        </Route>
+
+        <Route path="/contact-us">
+          <ContactUs />
+        </Route>
+
+        <Route path="/">
+          <Home />
+        </Route>
+      </Switch>
+    </Router>
   );
 }
 
