@@ -10,7 +10,7 @@ export function Project() {
   return (
     <div className="mx-4">
       <div className="alert alert-info mt-2 text-center">
-        COUNTER {state.counter}
+        COUNTER {state.cr.counter}
       </div>
 
       <input
@@ -21,7 +21,7 @@ export function Project() {
       />
 
       <input
-        className="btn btn-secondary btn-lg  m-1 w-100"
+        className="btn btn-dark btn-lg  m-1 w-100"
         type="button"
         onClick={() => decrement()}
         value="DECREMENT"

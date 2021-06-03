@@ -8,8 +8,10 @@ export function ContactUs() {
       <h2>{state.message}</h2>
       <h2>{state.counter}</h2>
 
-      {state.list.map((item, index) => (
-        <h3 className="bg-info text-light p-1 px-3" key={index}>{item}</h3>
+      {state.tweet.list.map((item, index) => (
+        <h3 className="bg-info text-light p-1 px-3" key={index}>
+          {item}
+        </h3>
       ))}
     </div>
   );
