@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { postTweetAction } from "../redux/actions/AppAction";
 
 export function Home() {
   //private in nature: state member are for this component only..
@@ -11,7 +12,7 @@ export function Home() {
 
   const updateTinput = (e) => setTinput(e.target.value);
   const postTweet = () => {
-    dispatch({ type: "POST_TWEET", payload: tinput });
+    dispatch(postTweetAction(tinput));
     setTinput("");
   };
 

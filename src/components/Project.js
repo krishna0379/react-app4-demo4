@@ -1,11 +1,12 @@
 import { useDispatch, useSelector } from "react-redux";
+import { incrementAction, decrmentAction } from "../redux/actions/AppAction";
 
 export function Project() {
   const state = useSelector((state) => state);
   const dispatch = useDispatch();
 
-  const increment = () => dispatch({ type: "INC" });
-  const decrement = () => dispatch({ type: "DEC" });
+  const increment = () => dispatch(incrementAction());
+  const decrement = () => dispatch(decrmentAction());
   return (
     <div className="mx-4">
       <div className="alert alert-info mt-2 text-center">
