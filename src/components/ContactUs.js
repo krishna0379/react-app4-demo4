@@ -9,7 +9,7 @@ export function ContactUs() {
       <h2>{state.counter}</h2>
 
       {state.list.map((item, index) => (
-        <div key={index}>{item}</div>
+        <h3 className="bg-info text-light p-1 px-3" key={index}>{item}</h3>
       ))}
     </div>
   );
