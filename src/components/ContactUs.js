@@ -7,6 +7,10 @@ export function ContactUs() {
       <h1 className="text-light">Contact Us Page</h1>
       <h2>{state.message}</h2>
       <h2>{state.counter}</h2>
+
+      {state.list.map((item, index) => (
+        <div key={index}>{item}</div>
+      ))}
     </div>
   );
 }
