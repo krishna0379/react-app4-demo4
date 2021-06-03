@@ -1,14 +1,17 @@
 import { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 
 export function Home() {
   //private in nature: state member are for this component only..
 
   const [tinput, setTinput] = useState("");
-  const [list, setList] = useState([]);
+
+  const state = useSelector((state) => state);
+  const dispatch = useDispatch();
 
   const updateTinput = (e) => setTinput(e.target.value);
   const postTweet = () => {
-    setList([tinput, ...list]);
+    dispatch({ type: "POST_TWEET", payload: tinput });
     setTinput("");
   };
 
@@ -33,7 +36,7 @@ export function Home() {
 
       {/** DISPLAY TWEET HERE */}
       <div className="mx-4 mt-4">
-        {list.map((item, index) => (
+        {state.list.map((item, index) => (
           <h4 key={index} className="text-secondary">
             {item}
           </h4>

@@ -7,7 +7,6 @@ import { Project } from "./components/Project";
 import { ContactUs } from "./components/ContactUs";
 import { AppNavBar } from "./Common/AppBarNar";
 
-
 function App() {
   return (
     <Router>

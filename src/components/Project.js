@@ -1,8 +1,6 @@
-import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 export function Project() {
-  //const [counter, setCounter] = useState(0);
   const state = useSelector((state) => state);
   const dispatch = useDispatch();
 
